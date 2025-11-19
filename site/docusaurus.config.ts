@@ -13,12 +13,12 @@ export default {
   // Future compatibility flags.
   future: { v4: true },
 
-  url: 'https://move-book.com',
-  baseUrl: '/',
+  url: 'https://your-username.github.io',
+  baseUrl: '/move-book-ja/',
 
   // GitHub pages deployment config.
-  organizationName: 'MystenLabs',
-  projectName: 'move-book',
+  organizationName: 'your-username',
+  projectName: 'move-book-ja',
 
   // Relax or throw on broken links, options are: 'warn', 'throw'.
   onBrokenLinks: 'throw',

@@ -3,6 +3,10 @@
 This is the repository for [the Move Book](https://move-book.com) and
 [Move Language Reference](https://move-book.com/reference).
 
+## Japanese Translation Site Overview
+
+For information on running the Japanese translation site for The Move Book and Move Language Reference, see [docs/overview.md](docs/overview.md). It covers the project purpose, technology stack, deployment to GitHub Pages, and ongoing translation workflow. Section 2-5 in that document provides a step-by-step checklist for deploying to GitHub Pages.
+
 ## Structure
 
 - Two books are placed in the `book` and `reference` directories. The `book` directory contains the
