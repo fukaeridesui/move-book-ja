@@ -2,11 +2,11 @@ name: Run tests for Move packages
 permissions:
   contents: read
 
-env:
-  # Known-good Sui CLI version for these examples. Using `latest` occasionally
-  # triggers verifier regressions (e.g., dynamic_fields/foreign_types), so pin
-  # to a stable release instead of tracking the newest tag.
-  VERSION: 'v1.24.1'
+# Set the VERSION variable to use when downloading the binary
+# Currently, requires explicit setup, ideally it should be fetched
+# automatically
+# env:
+#   VERSION: 'v1.24.1'
 
 on:
   pull_request:
@@ -21,15 +21,11 @@ jobs:
         with:
           repo: MystenLabs/sui
           platform: ubuntu
-          version: ${{ env.VERSION }}
+          version: main
           cache: enable
 
       # Run the tests in every directory using the latest mainnet binary
-      # Do not refetch git dependencies (e.g. Sui framework) so we always test
-      # against the pinned revisions recorded in Move.lock. Fetching latest
-      # frameworks with an older CLI can trigger verifier crashes like
-      # dynamic_fields/* and publisher/*. See GH issue context in PR.
-      - run: sui move test --path packages/samples --skip-fetch-latest-git-deps
-      - run: sui move test --path packages/reference --skip-fetch-latest-git-deps
-      - run: sui move test --path packages/todo_list --skip-fetch-latest-git-deps
-      - run: sui move test --path packages/hello_world --skip-fetch-latest-git-deps
+      - run: sui move test --path packages/samples
+      - run: sui move test --path packages/reference
+      - run: sui move test --path packages/todo_list
+      - run: sui move test --path packages/hello_world

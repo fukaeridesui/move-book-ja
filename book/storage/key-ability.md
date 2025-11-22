@@ -65,7 +65,7 @@ we cover the `store` ability to later explain how [storage operations](./storage
 
 ## Further Reading
 
-- [Type Abilities](/move-book-ja/reference/abilities) in the Move Reference.
+- [Type Abilities](./../../reference/abilities) in the Move Reference.
 
 [drop-ability]: ./../move-basics/drop-ability
 [copy-ability]: ./../move-basics/copy-ability

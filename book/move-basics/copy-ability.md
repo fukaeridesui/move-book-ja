@@ -58,4 +58,4 @@ All of the types defined in the standard library have the `copy` ability as well
 
 ## Further Reading
 
-- [Type Abilities](/move-book-ja/reference/abilities) in the Move Reference.
+- [Type Abilities](./../../reference/abilities) in the Move Reference.

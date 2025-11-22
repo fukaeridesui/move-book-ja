@@ -99,7 +99,7 @@ Some functions in the [framework](./../programmability/sui-framework) and
 [standard library](./standard-library) are marked with the `native` modifier. These functions are
 natively provided by the Move VM and do not have a body in Move source code. To learn more about the
 native modifier, refer to the
-[Move Reference](/move-book-ja/reference/functions?highlight=native#native-functions).
+[Move Reference](./../../reference/functions?highlight=native#native-functions).
 
 ```move
 module std::type_name;
@@ -112,4 +112,4 @@ This is an example from `std::type_name`, learn more about this module in the
 
 ## Further Reading
 
-- [Visibility](/move-book-ja/reference/functions#visibility) in the Move Reference.
+- [Visibility](./../../reference/functions#visibility) in the Move Reference.

@@ -49,5 +49,5 @@ The `destroy_empty` function will fail at runtime if you call it on a non-empty 
 
 ## Further Reading
 
-- [Vector](/move-book-ja/reference/primitive-types/vector) in the Move Reference.
+- [Vector](./../../reference/primitive-types/vector) in the Move Reference.
 - [std::vector](https://docs.sui.io/references/framework/std/vector) module documentation.

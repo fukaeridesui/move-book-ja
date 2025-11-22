@@ -66,5 +66,5 @@ To create a value of the `Option` type, you can use the `option::some` or `optio
 
 - [std::option][option-stdlib] in the standard library
 
-[enum-reference]: /move-book-ja/reference/enums
+[enum-reference]: ./../../reference/enums
 [option-stdlib]: https://docs.sui.io/references/framework/std/option

@@ -82,4 +82,4 @@ unused.
 
 ## Further Reading
 
-- [Structs](/move-book-ja/reference/structs) in the Move Reference.
+- [Structs](./../../reference/structs) in the Move Reference.

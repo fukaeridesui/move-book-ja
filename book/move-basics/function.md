@@ -74,4 +74,4 @@ If some of the arguments are not used, they can be ignored with the `_` symbol:
 
 ## Further Reading
 
-- [Functions](/move-book-ja/reference/functions) in the Move Reference.
+- [Functions](./../../reference/functions) in the Move Reference.

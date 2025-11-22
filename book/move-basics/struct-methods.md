@@ -70,4 +70,4 @@ bytes.
 
 ## Further Reading
 
-- [Method Syntax](/move-book-ja/reference/method-syntax) in the Move Reference.
+- [Method Syntax](./../../reference/method-syntax) in the Move Reference.

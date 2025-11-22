@@ -128,4 +128,4 @@ parameter does not have the specified abilities, the code will not compile.
 
 ## Further Reading
 
-- [Generics](/move-book-ja/reference/generics) in the Move Reference.
+- [Generics](./../../reference/generics) in the Move Reference.

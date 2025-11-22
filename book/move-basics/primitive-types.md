@@ -96,7 +96,7 @@ multiplication, division, and modulus (remainder). The syntax for these operatio
 | /      | truncating division | The divisor is 0                         |
 
 > For more operations, including bitwise operations, please refer to the
-> [Move Reference](/move-book-ja/reference/primitive-types/integers#bitwise).
+> [Move Reference](./../../reference/primitive-types/integers#bitwise).
 
 The types of the operands _must match_, or the compiler will raise an error. The result of the
 operation will be of the same type as the operands. To perform operations on different types, the
@@ -140,5 +140,5 @@ let z = x + y;
 
 ## Further Reading
 
-- [Bool](/move-book-ja/reference/primitive-types/bool) in the Move Reference.
-- [Integer](/move-book-ja/reference/primitive-types/integers) in the Move Reference.
+- [Bool](./../../reference/primitive-types/bool) in the Move Reference.
+- [Integer](./../../reference/primitive-types/integers) in the Move Reference.

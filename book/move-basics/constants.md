@@ -70,5 +70,5 @@ upgrade.
 
 ## Links
 
-- [Constants](/move-book-ja/reference/constants) in the Move Reference
+- [Constants](./../../reference/constants) in the Move Reference
 - [Coding conventions for constants](./../guides/code-quality-checklist#regular-constant-are-all_caps)

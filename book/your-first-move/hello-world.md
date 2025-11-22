@@ -237,4 +237,4 @@ is structured and what the language can do.
 ## Further Reading
 
 - [Package Manifest](./../concepts/manifest.md) section
-- Package in [The Move Reference](/move-book-ja/reference/packages)
+- Package in [The Move Reference](./../../reference/packages)

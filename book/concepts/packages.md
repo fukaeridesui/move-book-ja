@@ -76,4 +76,4 @@ transactions.
 
 - [Package Manifest](./manifest)
 - [Address](./address)
-- [Packages](/move-book-ja/reference/packages) in the Move Reference.
+- [Packages](./../../reference/packages) in the Move Reference.
