@@ -145,6 +145,8 @@ jobs:
           publish_branch: gh-pages
 ```
 
+> 上記の例のように **`on.push.branches` を `main` にしておけば、`main` マージのたびに自動ビルド・自動デプロイ** されます（GitHub Pages のブランチ設定が `gh-pages` になっている前提）。
+
 ### 2-5. GitHub Pages デプロイ手順（ステップバイステップ）
 
 1. **リポジトリの準備**
@@ -179,6 +181,11 @@ jobs:
    - Actions のデプロイが成功したら `https://<your-account>.github.io/move-book-ja/` にアクセスして表示を確認します。
    - サイトが 404 になる場合は `baseUrl` や GitHub Pages のブランチ設定を再度確認します。
 
+### 2-6. 自動デプロイの運用ポイント
+
+- `main` マージをトリガーに自動デプロイするため、デプロイ確認用の Preview は PR ビルドで行い、`main` は常にデプロイ可能な状態を保つ運用を推奨します。
+- デプロイログは GitHub Actions の「Deploy Docusaurus Site and Deploy to GitHub Pages」ワークフローで確認できます。失敗時は `site/docusaurus.config.ts` の `url`/`baseUrl`、または `publish_dir` のパスを再確認してください。
+
 ---
 
 ## 3. 運用方針
@@ -202,6 +209,20 @@ jobs:
 - **週 1 回** を目安に upstream（`MystenLabs/move-book`）から原文を取り込み、差分を確認・再翻訳する
 - プルリク作成 → レビュー → 翻訳反映
 - 必要に応じて補足説明・脚注を追加
+
+### 3-5. 上流同期の自動化（GitHub Actions 例）
+
+週 1 回の同期を自動化したい場合は、以下のようなワークフロー（`.github/workflows/upstream-sync.yml`）を追加できます。
+
+- **スケジュール実行 & 手動実行**: 毎週月曜 01:00 UTC に実行、必要に応じて `workflow_dispatch` で手動実行可能。
+- **手順**:
+  1. `main` を fetch（`fetch-depth: 0`）して履歴を取得。
+  2. upstream を `https://github.com/MystenLabs/move-book.git` で追加し、`upstream/main` を fetch。
+  3. `main` に `git merge upstream/main --no-edit` を実行し、競合があればエラーで停止。
+  4. `peter-evans/create-pull-request` で `automation/upstream-sync` ブランチに PR を作成。
+- **運用ポイント**:
+  - 競合が出た場合はワークフローが失敗するので、ブランチにチェックアウトして手動解消し、同ブランチに push すれば PR はそのまま活用できます。
+  - 翻訳側で削除したファイル（例: `CNAME`）は、上流が変更を加えない限りは削除状態が維持されます。競合した場合のみ、解消時に再度削除を選択してください。
 
 ### 3-3. ライセンスとクレジット
 
