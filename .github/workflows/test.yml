@@ -2,11 +2,11 @@ name: Run tests for Move packages
 permissions:
   contents: read
 
-# Set the VERSION variable to use when downloading the binary
-# Currently, requires explicit setup, ideally it should be fetched
-# automatically
-# env:
-#   VERSION: 'v1.24.1'
+env:
+  # Known-good Sui CLI version for these examples. Using `latest` occasionally
+  # triggers verifier regressions (e.g., dynamic_fields/foreign_types), so pin
+  # to a stable release instead of tracking the newest tag.
+  VERSION: 'v1.24.1'
 
 on:
   pull_request:
@@ -21,7 +21,7 @@ jobs:
         with:
           repo: MystenLabs/sui
           platform: ubuntu
-          version: latest
+          version: ${{ env.VERSION }}
           cache: enable
 
       # Run the tests in every directory using the latest mainnet binary
