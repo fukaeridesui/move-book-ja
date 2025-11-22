@@ -1,8 +1,10 @@
 name: Weekly upstream sync
 
+# NOTE: 自動実行は翻訳作業完了後に有効化してください。
+# schedule トリガーはコメントアウトしています。
 on:
-  schedule:
-    - cron: '0 1 * * 1' # Every Monday 01:00 UTC
+  # schedule:
+  #   - cron: '0 1 * * 1' # Every Monday 01:00 UTC
   workflow_dispatch:
 
 permissions:

@@ -29,7 +29,7 @@ Move 言語は Sui ブロックチェーンや Aptos で用いられるプログ
 ### 1-4. 翻訳サイトの公開先
 
 - GitHub Pages（`gh-pages` ブランチ）
-- カスタムドメインまたは `username.github.io/move-book-ja/` 形式
+- カスタムドメインまたは `fukaeridesui.github.io/move-book-ja/` 形式
 
 ---
 
@@ -214,7 +214,7 @@ jobs:
 
 週 1 回の同期を自動化したい場合は、以下のようなワークフロー（`.github/workflows/upstream-sync.yml`）を追加できます。
 
-- **スケジュール実行 & 手動実行**: 毎週月曜 01:00 UTC に実行、必要に応じて `workflow_dispatch` で手動実行可能。
+- **スケジュール実行 & 手動実行**: 毎週月曜 01:00 UTC の `schedule` トリガーを記載していますが、現在はコメントアウトしており、自動実行されません。必要に応じて `workflow_dispatch` で手動実行可能です。
 - **手順**:
   1. `main` を fetch（`fetch-depth: 0`）して履歴を取得。
   2. upstream を `https://github.com/MystenLabs/move-book.git` で追加し、`upstream/main` を fetch。

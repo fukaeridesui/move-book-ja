@@ -13,11 +13,11 @@ export default {
   // Future compatibility flags.
   future: { v4: true },
 
-  url: 'https://your-username.github.io',
+  url: 'https://fukaeridesui.github.io',
   baseUrl: '/move-book-ja/',
 
   // GitHub pages deployment config.
-  organizationName: 'your-username',
+  organizationName: 'fukaeridesui',
   projectName: 'move-book-ja',
 
   // Relax or throw on broken links, options are: 'warn', 'throw'.
