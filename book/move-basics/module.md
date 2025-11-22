@@ -83,4 +83,4 @@ blocks is not recommended practice.
 
 ## Further Reading
 
-- [Modules](./../../reference/modules) in the Move Reference.
+- [Modules](/move-book-ja/reference/modules) in the Move Reference.

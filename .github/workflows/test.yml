@@ -21,7 +21,7 @@ jobs:
         with:
           repo: MystenLabs/sui
           platform: ubuntu
-          version: main
+          version: latest
           cache: enable
 
       # Run the tests in every directory using the latest mainnet binary

@@ -57,5 +57,5 @@ Example: Convert an address into a string.
 
 ## Further Reading
 
-- [Address](./../../reference/primitive-types/address) in the Move Reference.
+- [Address](/move-book-ja/reference/primitive-types/address) in the Move Reference.
 - [sui::address](https://docs.sui.io/references/framework/sui/address) module documentation.

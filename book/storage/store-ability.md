@@ -58,7 +58,7 @@ All of the types defined in the standard library have the `store` ability as wel
 
 ## Further Reading
 
-- [Type Abilities](./../../reference/abilities) in the Move Reference.
+- [Type Abilities](/move-book-ja/reference/abilities) in the Move Reference.
 
 [key-ability]: ./key-ability.md
 [drop-ability]: ./../move-basics/drop-ability.md

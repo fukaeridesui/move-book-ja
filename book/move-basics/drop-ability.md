@@ -74,4 +74,4 @@ All of the types defined in the standard library have the `drop` ability as well
 
 ## Further Reading
 
-- [Type Abilities](./../../reference/abilities) in the Move Reference.
+- [Type Abilities](/move-book-ja/reference/abilities) in the Move Reference.

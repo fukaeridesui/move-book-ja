@@ -38,7 +38,7 @@ export default {
       {
         id: 'reference',
         path: './../reference',
-        routeBasePath: '/reference',
+        routeBasePath: 'reference',
         sidebarPath: './sidebar-reference.ts',
         sidebarCollapsible: false,
         breadcrumbs: false,
