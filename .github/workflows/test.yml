@@ -25,7 +25,11 @@ jobs:
           cache: enable
 
       # Run the tests in every directory using the latest mainnet binary
-      - run: sui move test --path packages/samples
-      - run: sui move test --path packages/reference
-      - run: sui move test --path packages/todo_list
-      - run: sui move test --path packages/hello_world
+      # Do not refetch git dependencies (e.g. Sui framework) so we always test
+      # against the pinned revisions recorded in Move.lock. Fetching latest
+      # frameworks with an older CLI can trigger verifier crashes like
+      # dynamic_fields/* and publisher/*. See GH issue context in PR.
+      - run: sui move test --path packages/samples --skip-fetch-latest-git-deps
+      - run: sui move test --path packages/reference --skip-fetch-latest-git-deps
+      - run: sui move test --path packages/todo_list --skip-fetch-latest-git-deps
+      - run: sui move test --path packages/hello_world --skip-fetch-latest-git-deps
