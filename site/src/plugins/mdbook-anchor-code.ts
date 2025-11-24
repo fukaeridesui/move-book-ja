@@ -5,15 +5,15 @@ import fs from 'fs';
 import path from 'path';
 import { visit } from 'unist-util-visit';
 import type { Plugin } from 'unified';
-import type { Code, Root } from 'mdast';
+import type { Root } from 'mdast';
 
 interface Options {
   rootDir?: string;
 }
 
 const plugin: Plugin<[Options?], Root> = ({ rootDir = process.cwd() } = {}) => {
-  return (tree: Root) => {
-    visit(tree as any, 'code', (node: Code) => {
+  return (tree, file) => {
+    visit(tree, 'code', (node) => {
       if (!node.meta) return;
 
       const match = node.meta.match(/file=(\S+)/);
