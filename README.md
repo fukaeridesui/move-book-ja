@@ -1,7 +1,7 @@
 # The Move Book
 
-This is the repository for [the Move Book](https://move-book.com) and
-[Move Language Reference](https://move-book.com/reference).
+This is the repository for [the Move Book](https://fukaeridesui.github.io/move-book-ja/) and
+[Move Language Reference](https://fukaeridesui.github.io/move-book-ja/reference).
 
 ## Structure
 
